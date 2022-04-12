@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="includeHTML.js"></script>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
-        <header include-html="header.html"></header>
-        <script>
-            includeHTML();
-        </script>
-        <h2>HTML이란 무엇인가?</h2>
-        <p>
-            <a
-                href="https://www.w3.org/TR/2011/WD-html5-20110405/"
-                title="HTML5 specification">Hypertext Markup Language(HTML)</a>is the standard markup language for
-            <strong>creating
-                <u>web</u>
-                pages</strong>
-            and web applications. Web browsers receive HTML documents from a web server or
-            from local storage and render the documents into multimedia web pages. HTML
-            describes the structure of a web page semantically and originally included cues
-            for the appearance of the document.</p>
-        <img src="coding.jpg" width="100%">
-        <p style="margin-top: 40px;">
-            HTML elements are the building blocks of HTML pages. With HTML constructs,
-            images and other objects such as interactive forms may be embedded into the
-            rendered page. HTML provides a means to create structured documents by denoting
-            structural semantics for text such as headings, paragraphs, lists, links, quotes
-            and other items. HTML elements are delineated by tags, written using angle
-            brackets.
-        </p>
-    </p>
-</body>
-</html>
+        <div id="header"></div>
+        <div id="grid">
+            <div id="sidebar"></div>
+            <div id="article">
+                <h2>HTML이란 무엇인가?</h2>
+                <p>
+                    <a
+                        href="https://www.w3.org/TR/2011/WD-html5-20110405/"
+                        title="HTML5 specification">Hypertext Markup Language(HTML)</a>is the standard markup language for
+                    <strong>creating
+                        <u>web</u>
+                        pages</strong>
+                    and web applications. Web browsers receive HTML documents from a web server or
+                    from local storage and render the documents into multimedia web pages. HTML
+                    describes the structure of a web page semantically and originally included cues
+                    for the appearance of the document.</p>
+                <!-- <img
+                src="https://images.unsplash.com/photo-1649698314332-8040f6c5aa9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                width="70%"> -->
+                <p style="margin-top: 40px;">
+                    HTML elements are the building blocks of HTML pages. With HTML constructs,
+                    images and other objects such as interactive forms may be embedded into the
+                    rendered page. HTML provides a means to create structured documents by denoting
+                    structural semantics for text such as headings, paragraphs, lists, links, quotes
+                    and other items. HTML elements are delineated by tags, written using angle
+                    brackets.
+                </p>
+            </div>
+            <hr>
+            <div id="footer"></div>
+        </body>
+    </html>

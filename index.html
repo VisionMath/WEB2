@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="includeHTML.js"></script>
+        <!-- <script src="includeHTML.js"></script> -->
         <title>WEB2 - HTML</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- ...or whereever you have jquery stored -->
+        <script src="script.js"></script>
     </head>
     <body>
-        <header include-html="header.html"></header>
-
-        <h2>WEB이란 무엇인가?</h2>
-        <p style="margin-top: 40px;">The World Wide Web (WWW), commonly known as the
-            Web, is the world's dominant software platform.[1] It was originally a hypertext
-            document management system[2] accessed over the Internet.[3] The resources of
-            the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be
-            accessed by users by a software application called a web browser, and are
-            published by a software application called a web server. Web resources may be
-            any type of downloaded media, but web pages are hypertext documents formatted in
-            Hypertext Markup Language (HTML). Special HTML syntax displays embedded
-            hyperlinks with URLs, which permits users to navigate to other web resources. In
-            addition to text, web pages may contain references to images, video, audio, and
-            software components, which are either displayed or internally executed in the
-            user's web browser to render pages or streams of multimedia conten
-        </p>
-        <footer include-html="footer.html"></footer>
-        <script>
-            includeHTML();
-        </script>        
+        <!-- <header include-html="header.html"></header> -->
+        <div id="header"></div>
+        <div id="grid">
+            <div id="sidebar"></div>
+            <div id="article">
+                <h2>WEB이란 무엇인가?</h2>
+                <p style="margin-top: 40px;">The World Wide Web (WWW), commonly known as the
+                    Web, is the world's dominant software platform.[1] It was originally a hypertext
+                    document management system[2] accessed over the Internet.[3] The resources of
+                    the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be
+                    accessed by users by a software application called a web browser, and are
+                    published by a software application called a web server. Web resources may be
+                    any type of downloaded media, but web pages are hypertext documents formatted in
+                    Hypertext Markup Language (HTML). Special HTML syntax displays embedded
+                    hyperlinks with URLs, which permits users to navigate to other web resources. In
+                    addition to text, web pages may contain references to images, video, audio, and
+                    software components, which are either displayed or internally executed in the
+                    user's web browser to render pages or streams of multimedia conten
+                </p>
+            </div>
+            <!-- <footer include-html="footer.html"></footer> -->
+            <!-- <script>
+                includeHTML();
+            </script> -->            
+        </div>
+        <hr>  
+        <div id="footer"></div>      
     </body>
 </html>
