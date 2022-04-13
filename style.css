@@ -13,14 +13,7 @@ h1 {
     border-bottom: 1px solid gray;
     margin: 0;
     padding: 20px;
-    background-color: #2574A9;    
-}
-
-#grid ol {
-    border-right: 1px solid gray;
-    width: 100px;
-    margin: 0;
-    padding: 20px;
+    background-color: #2574A9;
 }
 
 #grid {
@@ -29,17 +22,21 @@ h1 {
     /* display: flex; */
 }
 
+#grid ul {
+    /* border-right: 1px solid gray; */
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+
 #sidebar {
     width: 150px;
-    /* flex: 1; */
 }
 
 #article {
     padding-left: 25px;
     padding-right: 25px;
-    /* border-left: 1px solid gray; */
     min-height: 400px;
-    /* flex: 3; */
 }
 
 #footer {
@@ -71,7 +68,7 @@ h1 {
 .sidebar-navigation {
     padding: 0;
     margin: 0;
-    list-style-type: none;
+    list-style: none;
     position: relative;
 }
 
@@ -79,7 +76,7 @@ h1 {
     background-color: transparent;
     position: relative;
     display: inline-block;
-    width: 100%;
+    width: 150px;
     line-height: 20px;
 }
 
@@ -118,10 +115,7 @@ h1 {
 }
 
 .sidebar-navigation .header {
-    font-size: 12px;
-    text-transform: uppercase;
-    background-color: #151515;
-    padding: 10px 15px 10px 30px;
+    display: none;
 }
 
 .sidebar-navigation .header::before {
@@ -132,29 +126,40 @@ h1 {
     padding-left: 220px;
 }
 
-@media screen and (max-width :500px) {
+@media screen and (max-width :600px) {
+    h1 {
+        display: none;
+        border-bottom: none;
+    }
+
     #grid {
         display: block;
     }
-    #grid ol {
+
+    /* #grid ul {
+        display: inline;
         border-right: none;
-    }
-    h1 {
-        border-bottom: none;
-    }
-    .sidebar-container {
-        min-height: 0px;
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .sidebar-navigation li a {
-        float:left;
-    }
-
-    /* .sidebar-container {
-        display: none;
     } */
 
+    .sidebar-container {
+        min-height: 40px;
+        width: 100%;
+        position:sticky;
+        display:inline-flex;
+        /* list-style: none;         */
+        /* overflow: hidden; */
+    }
+
+    /* .sidebar-navigation li a {
+        display: inline;
+        float:left;
+    } */
+
+    .sidebar-navigation .header {
+        width:150px;
+        font-size: 19px;
+        text-transform: uppercase;
+        background-color: rgb(17, 90, 66);
+        display: block;
+    }
 }
