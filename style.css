@@ -19,7 +19,7 @@ h1 {
 #grid {
     display: grid;
     grid-template-columns: 150px 1fr;
-    /* display: flex; */
+    grid-auto-rows: 1fr;
 }
 
 #grid ul {
@@ -31,6 +31,7 @@ h1 {
 
 #sidebar {
     width: 150px;
+    background: #1a1a1a;
 }
 
 #article {
@@ -47,7 +48,7 @@ h1 {
 .sidebar-container {
     position: fixed;
     width: 150px;
-    min-height: 400px;
+    /* min-height: 400px; */
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
@@ -114,7 +115,7 @@ h1 {
     width: 100%;
 }
 
-.navbar{
+#navbar{
     display: none;
 }
 
@@ -126,7 +127,7 @@ h1 {
     padding-left: 220px;
 }
 
-@media screen and (max-width :500px) {
+@media screen and (max-width :600px) {
     h1 {
         display: none;
         border-bottom: none;
@@ -145,39 +146,43 @@ h1 {
         display:none;
     }
 
-    .navbar-container {
-        display: block;
-    }
-
-    .navbar {
-        list-style-type: none;
+    #navbar {
+        display:block;
+        list-style: none;
         margin: 0;
         padding: 0;
-        background-color: #333;
+        background-color: green;
         position: relative;
     }
 
-    .navbar:after {
+    #navbar:after {
         content: '';
         display: block;
         clear: both;
     }
-    .navbar li {
+    #navbar li {
+        width:100px;
+        list-style: none;
         float: left;
     }
 
-    .navbar li a {
+    #navbar li a {
         display: block;
         color:white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 10px 16px;
         text-decoration: none;
     }
 
-    .navbar .header {
-        width:150px;
-        font-size: 19px;
+    #navbar #header {
+        list-style: none;
+        width:60px;
+        font-size: 15px;
         text-transform: uppercase;
         background-color: rgb(52, 66, 61);
+    }
+
+    #navbar li:hover {
+        background-color: rgb(145, 221, 145);
     }
 }
