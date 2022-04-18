@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+    background-color: #2574A9;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-auto-rows: 1fr;
+}
+
+#grid ul {
+    /* border-right: 1px solid gray; */
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar {
+    width: 150px;
+    background: #1a1a1a;
+}
+
+#article {
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: 400px;
+}
+
+#footer {
+    margin-top: 0;
+    border-top: 1px solid gray;
+}
+
+.sidebar-container {
+    position: fixed;
+    width: 150px;
+    /* min-height: 400px; */
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.content-container {
+    padding-top: 20px;
+}
+
+.sidebar-logo {
+    padding: 10px 15px 10px 30px;
+    font-size: 20px;
+    background-color: #2574A9;
+}
+
+.sidebar-navigation {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+.sidebar-navigation li {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    line-height: 20px;
+}
+
+.sidebar-navigation li a {
+    padding: 10px 15px 10px 30px;
+    display: block;
+    color: #fff;
+}
+
+.sidebar-navigation li .fa {
+    margin-right: 10px;
+}
+
+.sidebar-navigation li a:active,
+.sidebar-navigation li a:focus,
+.sidebar-navigation li a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+.sidebar-navigation li::before {
+    background-color: #2574A9;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
+    width: 3px;
+    z-index: -1;
+}
+
+.sidebar-navigation li:hover::before {
+    width: 100%;
+}
+
+#navbar{
+    display: none;
+}
+
+.sidebar-navigation .header::before {
+    background-color: transparent;
+}
+
+.content-container {
+    padding-left: 220px;
+}
+
+@media screen and (max-width :600px) {
+    h1 {
+        display: none;
+        border-bottom: none;
+    }
+
+    #grid {
+        display: block;
+    }
+
+    /* #grid ul {
+        display: inline;
+        border-right: none;
+    } */
+
+    .sidebar-container {
+        display:none;
+    }
+
+    #navbar {
+        display:block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: green;
+        position: relative;
+    }
+
+    #navbar:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    #navbar li {
+        width:100px;
+        list-style: none;
+        float: left;
+    }
+
+    #navbar li a {
+        display: block;
+        color:white;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+
+    #navbar #header {
+        list-style: none;
+        width:60px;
+        font-size: 15px;
+        text-transform: uppercase;
+        background-color: rgb(52, 66, 61);
+    }
+
+    #navbar li:hover {
+        background-color: rgb(145, 221, 145);
+    }
+}
